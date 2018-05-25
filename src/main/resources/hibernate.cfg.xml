@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="connection.url">jdbc:postgresql://localhost:5432/social_betting</property>
+		<property name="connection.username">postgres</property>
+		<property name="connection.password">1234</property>
+		<property name="connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+		<mapping class="com.socialbetting.objectmodel.User" />
+		<mapping class="com.socialbetting.objectmodel.Team" />
+		<mapping class="com.socialbetting.objectmodel.Competition" />
+		<mapping class="com.socialbetting.objectmodel.Game" />
+		<mapping class="com.socialbetting.objectmodel.Tournament" />
+	</session-factory>
+
+</hibernate-configuration> 
